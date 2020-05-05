@@ -34,15 +34,16 @@ extension String {
 }
 //
 class Login{
-    @Email var email : String  =  "abc@gmail.com"
+    @Email var email : String?  =  "abc@gmail.com"
     var otherEmail : String = "xyz@gmail.com"
     func printEmail(){
         
         // Using Property Wrapper
-        if let email =  email{
-            debugPrint("\(email) is valid email")
-        }
         
+        if let email = email{
+              debugPrint("\(email) is valid email")
+        }
+      
         // Using extension
         let value =  otherEmail.validateEmail()
         if value{
